@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  }
+
+body {
+background: #10101c;
+color: #f5f5fa;
+}
+
+.app-container {
+display: flex;
+min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+width: 250px;
+background: #171727;
+padding: 30px 20px;
+display: flex;
+flex-direction: column;
+border-right: 1px solid #292941;
+}
+
+.sidebar h2 {
+color: #a78bfa;
+font-size: 23px;
+margin-bottom: 45px;
+}
+
+.sidebar nav {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.sidebar nav a {
+text-decoration: none;
+color: #aaaac0;
+padding: 14px;
+border-radius: 10px;
+transition: 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+background: #30264d;
+color: #c4b5fd;
+}
+
+.sidebar-bottom {
+margin-top: auto;
+color: #aaaac0;
+font-size: 13px;
+line-height: 2;
+}
+
+/* Main Content */
+
+.main-content {
+flex: 1;
+padding: 40px;
+overflow: hidden;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 35px;
+}
+
+.date {
+color: #a78bfa;
+font-size: 11px;
+letter-spacing: 2px;
+margin-bottom: 12px;
+font-weight: 700;
+}
+
+header h1 {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+header p:last-child {
+color: #9999ae;
+font-size: 14px;
+}
+
+.profile {
+width: 48px;
+height: 48px;
+border-radius: 50%;
+background: linear-gradient(135deg, #8b5cf6, #34d399);
+display: grid;
+place-items: center;
+font-weight: 800;
+font-size: 20px;
+}
+
+/* Statistics Cards */
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-bottom: 25px;
+}
+
+.card,
+.panel {
+background: #1a1a2c;
+border: 1px solid #303049;
+border-radius: 16px;
+padding: 25px;
+}
+
+.card {
+transition: 0.3s ease;
+}
+
+.card:hover,
+.panel:hover {
+transform: translateY(-4px);
+border-color: #8b5cf6;
+}
+
+.card p {
+color: #a5a5ba;
+font-size: 14px;
+}
+
+.card h2 {
+margin: 18px 0 10px;
+font-size: 25px;
+}
+
+.card span {
+color: #77778f;
+font-size: 12px;
+}
+
+/* Content Grid */
+
+.content-grid {
+display: grid;
+grid-template-columns: 1.4fr 1fr;
+gap: 20px;
+margin-bottom: 25px;
+}
+
+.panel h2 {
+font-size: 19px;
+margin-bottom: 12px;
+}
+
+.panel p {
+color: #9999ae;
+font-size: 13px;
+line-height: 1.7;
+}
+
+/* Mood Selection */
+
+.moods {
+display: flex;
+justify-content: space-between;
+gap: 10px;
+margin-top: 25px;
+}
+
+.moods button {
+background: #25253b;
+border: 1px solid transparent;
+color: white;
+padding: 14px 10px;
+border-radius: 12px;
+cursor: pointer;
+font-size: 25px;
+transition: 0.3s ease;
+flex: 1;
+}
+
+.moods button:hover {
+background: #393052;
+border-color: #a78bfa;
+transform: translateY(-4px);
+}
+
+.moods span {
+display: block;
+font-size: 11px;
+margin-top: 8px;
+color: #aaaac0;
+}
+
+/* Wellness Tip */
+
+.tip {
+background: #20372f;
+border-left: 3px solid #34d399;
+padding: 15px;
+margin-top: 22px;
+border-radius: 8px;
+color: #a7f3d0;
+font-size: 13px;
+line-height: 1.7;
+}
+
+/* Journal */
+
+.journal {
+margin-bottom: 30px;
+}
+
+.primary-btn {
+background: linear-gradient(135deg, #8b5cf6, #6d4bc3);
+border: none;
+color: white;
+padding: 13px 20px;
+border-radius: 9px;
+margin-top: 18px;
+cursor: pointer;
+font-weight: 600;
+transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+opacity: 0.85;
+transform: translateY(-2px);
+}
+
+/* Footer */
+
+footer {
+text-align: center;
+color: #77778f;
+font-size: 12px;
+padding: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+.sidebar {
+width: 190px;
+}
+
+.main-content {
+    padding: 25px;
+}
+
+.stats {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content-grid {
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 600px) {
+.app-container {
+flex-direction: column;
+}
+
+.sidebar {
+    width: 100%;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.stats {
+    grid-template-columns: 1fr;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+.moods {
+    flex-wrap: wrap;
+}
+
+}
+/* Wellness Zone */
+
+.wellness-zone {
+    margin-top: 25px;
+}
+
+.breathing-card {
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 15px;
+}
+
+#breathingCircle {
+    width: 150px;
+    height: 150px;
+    margin: 25px auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #22c55e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    transition: transform 4s ease-in-out;
+}
+
+#breathingCircle.inhale {
+    transform: scale(1.25);
+}
+
+#breathingCircle.exhale {
+    transform: scale(0.85);
+}
+
+#breathingText {
+    text-align: center;
+}
+
+#breathingInstruction {
+    margin: 15px 0;
+}
+/* Theme Toggle Button */
+
+.theme-btn {
+    padding: 10px 16px;
+    border: 1px solid #8b5cf6;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.theme-btn:hover {
+    background: #8b5cf6;
+}
+/* Light Mode */
+
+body.light-mode {
+    background: #f4f5fb;
+    color: #25253a;
+}
+
+body.light-mode .sidebar {
+    background: #ffffff;
+    color: #25253a;
+}
+
+body.light-mode .sidebar a {
+    color: #44445a;
+}
+
+body.light-mode .main-content {
+    color: #25253a;
+}
+
+body.light-mode .card,
+body.light-mode .panel {
+    background: #ffffff;
+    color: #25253a;
+    border: 1px solid #e5e5ef;
+}
+
+body.light-mode .card p,
+body.light-mode .panel p {
+    color: #66667a;
+}
+
+body.light-mode .breathing-card {
+    background: #f0efff;
+}
+
+body.light-mode .theme-btn {
+    color: #25253a;
+}
+
+body.light-mode textarea {
+    background: #f8f8fc;
+    color: #25253a;
+}
+/* Professional UI Improvements */
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.profile-form input,
+.journal textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    color: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.profile-form input:focus,
+.journal textarea:focus {
+    border-color: #8b5cf6;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.primary-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8b5cf6, #22c55e);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .panel {
+        padding: 18px;
+        margin-top: 18px;
+    }
+
+    .chart-container {
+        height: 230px;
+    }
+
+    .theme-btn {
+        margin: 10px 0;
+    }
+
+    .profile-form {
+        max-width: 100%;
+    }
+}
+/* Dashboard Card Effects */
+
+.stats .card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.stats .card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+}
+
+/* Panel Design */
+
+.panel {
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+.panel h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Mood Buttons */
+
+.moods button {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.moods button:hover {
+    transform: translateY(-4px);
+    border-color: #8b5cf6;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+nav a {
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #8b5cf6;
+    padding-left: 10px;
+}

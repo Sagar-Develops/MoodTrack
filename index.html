@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTrack | Mental Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <h2>🌱 MoodTrack</h2>
+
+        <nav>
+    <a href="#dashboard">⌂ Dashboard</a>
+    <a href="#mood-tracker">😊 Mood Tracker</a>
+    <a href="#analytics">📊 Analytics</a>
+    <a href="#journal">📝 My Journal</a>
+    <a href="#wellness">🌿 Wellness</a>
+    <a href="#settings">⚙ Settings</a>
+</nav>
+
+        <div class="sidebar-bottom">
+            <p>Take care of yourself.</p>
+            <span>Every day matters 💚</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header id="dashboard">
+            <div>
+                <p class="date">YOUR PERSONAL WELLNESS SPACE</p>
+                <h1 id="welcomeTitle">Welcome to MoodTrack 👋</h1>
+                <p>Understand your mood. Manage your stress. Live better.</p>
+            </div>
+            <div class="profile">SK.</div>
+            <button id="themeToggle" class="theme-btn">
+    ☀️ Light Mode
+</button>
+        </header>
+        <section class="panel profile-section">
+    <h2>👤 My Profile</h2>
+    <p>Manage your personal information.</p>
+
+    <div class="profile-form">
+        <label for="userName">Your Name</label>
+        <input
+            type="text"
+            id="userName"
+            placeholder="Enter your name"
+        >
+
+        <button class="primary-btn" id="saveProfile">
+            Save Profile
+        </button>
+    </div>
+
+    <p id="profileMessage"></p>
+</section>
+
+        <section class="stats">
+
+            <div class="card">
+                <p>Today's Mood</p>
+                <h2>😊 Great</h2>
+                <span>Track how you feel today</span>
+            </div>
+
+            <div class="card">
+                <p>Stress Level</p>
+                <h2>🌿 Low</h2>
+                <span>Monitor your daily stress</span>
+            </div>
+
+            <div class="card">
+                <p>Total Check-ins</p>
+                <h2>07</h2>
+                <span>Your wellness journey</span>
+            </div>
+
+        </section>
+
+        <section class="content-grid" id="mood-tracker">
+
+            <div class="panel">
+                <h2>How are you feeling today?</h2>
+                <p>Select the mood that best describes your day.</p>
+
+                <div class="moods">
+                    <button>😢<span>Sad</span></button>
+                    <button>😟<span>Low</span></button>
+                    <button>😐<span>Okay</span></button>
+                    <button>🙂<span>Good</span></button>
+                    <button>😄<span>Great</span></button>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Daily Wellness Tip 🌿</h2>
+                <p>Take a short break, breathe slowly and give yourself time to relax.</p>
+                <div class="tip">Your mental wellness matters. Small steps make a difference.</div>
+            </div>
+
+        </section>
+        <section class="panel stress-panel">
+    <h2>🌿 Track Your Stress Level</h2>
+    <p>How much stress are you feeling today?</p>
+
+    <div class="stress-value">
+        <span>Stress Level:</span>
+        <strong id="stressValue">5 / 10</strong>
+    </div>
+
+    <input
+        type="range"
+        id="stressSlider"
+        min="1"
+        max="10"
+        value="5"
+    >
+
+    <div class="stress-labels">
+        <span>Low</span>
+        <span>Moderate</span>
+        <span>High</span>
+    </div>
+
+    <button class="primary-btn" id="saveStress">
+        Save Stress Level
+    </button>
+</section>
+<section class="panel analytics-panel" id="analytics">
+    <h2>📊 Weekly Mood Analytics</h2>
+    <p>Understand your mood patterns over time.</p>
+
+    <div class="chart-container">
+        <canvas id="moodChart"></canvas>
+    </div>
+
+    <h2>🌿 Stress Level Analytics</h2>
+
+    <div class="chart-container">
+        <canvas id="stressChart"></canvas>
+    </div>
+</section>
+
+        <section class="panel journal" id="journal">
+    <h2>📝 My Personal Journal</h2>
+    <p>Write your thoughts and reflect on your day.</p>
+
+    <textarea
+        id="journalEntry"
+        placeholder="Write about your day, thoughts and feelings..."
+        rows="5">
+    </textarea>
+
+    <button class="primary-btn" id="saveJournal">
+        Save Journal 💚
+    </button>
+
+    <h3>Previous Journal Entries</h3>
+
+    <div id="journalList">
+        <p>No journal entries yet.</p>
+    </div>
+</section>
+<section class="panel wellness-zone" id="wellness">
+    <h2>🌿 Wellness Zone</h2>
+    <p>Take a moment for yourself.</p>
+
+    <div class="breathing-card">
+        <h3>🧘 Breathing Exercise</h3>
+
+        <div id="breathingCircle">
+            <span id="breathingText">Ready?</span>
+        </div>
+
+        <p id="breathingInstruction">
+            Take a peaceful moment.
+        </p>
+
+        <button class="primary-btn" id="startBreathing">
+            Start Exercise
+        </button>
+    </div>
+</section>
+<section class="panel settings-panel" id="settings">
+    <h2>⚙️ App Settings</h2>
+    <p>Manage your MoodTrack experience.</p>
+
+    <div class="setting-item">
+        <h3>🌙 Appearance</h3>
+        <p>Switch between Dark Mode and Light Mode.</p>
+        <button class="primary-btn" id="settingsTheme">
+            Change Theme
+        </button>
+    </div>
+
+    <div class="setting-item">
+        <h3>👤 Profile</h3>
+        <p>Update your personal profile information.</p>
+        <button class="primary-btn" onclick="document.querySelector('.profile-section').scrollIntoView({behavior:'smooth'})">
+            Edit Profile
+        </button>
+    </div>
+
+    <div class="setting-item">
+        <h3>🔒 Privacy</h3>
+        <p>Your MoodTrack entries are stored in this browser.</p>
+    </div>
+
+    <div class="setting-item">
+        <h3>🌿 About MoodTrack</h3>
+        <p>A personal wellness tracker to understand your daily mood and stress patterns.</p>
+    </div>
+</section>
+
+        <footer>
+    <p>© 2026 MoodTrack | Your Personal Wellness Companion</p>
+    <p>Developed by <strong>Sagar Koturwar</strong></p>
+</footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
