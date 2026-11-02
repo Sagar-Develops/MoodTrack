@@ -1,0 +1,33 @@
+# 🌱 MoodTrack – Personal Wellness Tracker
+
+MoodTrack is a personal wellness tracking web application designed to help users understand their daily mood and stress patterns.
+
+## ✨ Features
+
+* 😊 Daily Mood Tracking
+* 🌿 Stress Level Tracking
+* 📊 Weekly Mood Analytics
+* 📝 Personal Journal
+* 🧘 Breathing Exercise
+* 🌙 Dark and Light Mode
+* 👤 User Profile
+* ⚙️ App Settings
+* 📱 Responsive Design
+
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript
+* Chart.js
+* LocalStorage
+
+## 💡 About the Project
+
+MoodTrack helps users record their daily moods, monitor stress levels, write personal journal entries, and view their weekly progress through interactive charts.
+
+All entries are stored locally in the browser using LocalStorage.
+
+## 👨‍💻 Developer
+
+**Sagar Koturwar**
